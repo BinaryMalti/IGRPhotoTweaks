@@ -46,8 +46,8 @@ open class IGRPhotoTweakViewController: UIViewController {
     //MARK: - Private VARs
     
     public lazy var photoView: IGRPhotoTweakView! = { [unowned self] by in
-        
-        let photoView = IGRPhotoTweakView(frame: self.view.bounds,
+        let bounds = CGRect(x: 0, y: -50, width: self.view.bounds.width, height: self.view.bounds.height)
+        let photoView = IGRPhotoTweakView(frame: bounds,
                                           image: self.image,
                                           customizationDelegate: self)
         photoView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
